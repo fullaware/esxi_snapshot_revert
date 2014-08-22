@@ -1,0 +1,5 @@
+Future feature:
+remove all snapshots and create new ones:
+
+vim-cmd vmsvc/snapshot.removeall VM_ID 
+vim-cmd vmsvc/snapshot.create VM_ID my_snapshot snapshot_test 0 0
