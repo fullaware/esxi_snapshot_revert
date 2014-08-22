@@ -1,4 +1,7 @@
 #!/bin/bash
+#  Make sure all VM's are powered off for this phase unless you 
+#  want to snapshot the running VM which takes WAY more space
+
 TARGET_VMS="mapr"
 
 rm nodeid.txt
