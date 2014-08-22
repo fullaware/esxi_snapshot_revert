@@ -1,5 +1,7 @@
 #ESXi revert multiple VM's back to single snapshot
 
+[What is this script doing?](#what)  
+[How do I use it?](#how)
 
 Used in lab environment where a single ESXi host is running multiple VM's that have a single snapshot.  We want to revert all the vms with a certain name back to that single snapshot.  
 
@@ -16,7 +18,7 @@ All snapshots were created in the powered off state.
 SSH must be enabled on the ESXi host: [VMware KB](http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2004746)
 
 
-###What is this script doing?
+###<a name="what"></a>What is this script doing?
 
 1. Find all VMs with the name "mapr" and dump the `VM_ID` to a file called `nodeid.txt`  
 `vim-cmd vmsvc/getallvms|grep mapr`
@@ -30,7 +32,7 @@ SSH must be enabled on the ESXi host: [VMware KB](http://kb.vmware.com/selfservi
 4. And since I want to get back to breaking the VM's as quickly as possible, power them on.  
 `vim-cmd vmsvc/power.on $VM_ID`
 
-###How do I use it?###
+###<a name="how"></a>How do I use it?###
 
 Change the variable in `revert.sh` to `TARGET_VMS="your_vmnames"`
 
