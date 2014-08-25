@@ -11,11 +11,11 @@ Used in lab environment where a single VMWare ESXi host is running multiple VM's
 
 I have 5 VM's named:  
 
-mapr01  
-mapr02  
-mapr03  
-mapr04  
-mapr05  
+    mapr01  
+    mapr02  
+    mapr03  
+    mapr04  
+    mapr05
 
 **NOT TESTED** If multiple snapshots exist, not sure what will happen.
 
