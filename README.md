@@ -1,4 +1,5 @@
-#VMWare ESXi revert multiple VM's back to single snapshot.  (single host lab environment)
+#VMWare ESXi revert multiple VM's back to single snapshot.  
+###(In a single host lab environment)
 
 [What is this script doing?](#what)  
 [How do I use it?](#how)  
