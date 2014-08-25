@@ -16,6 +16,14 @@ CLIENT = OSX 10.9.4
 
 All snapshots were created in the powered off state.
 
+I have 5 VM's named:  
+
+mapr01  
+mapr02  
+mapr03  
+mapr04  
+mapr05  
+
 SSH must be enabled on the ESXi host: [VMware KB](http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2004746)
 
 
@@ -94,13 +102,21 @@ Execute directly on ESXi host or directly from your client machine via:
     --Snapshot State       : powered off
     Powering on VM:
 
-###<a name="resnap"></a>(re)Create snapshots for multiple VM's###
+##<a name="resnap"></a>(re)Create snapshots for multiple VM's###
 
+This will query your VMWare ESXi host for all the VM's whose names contain `TARGET_VMS` and will create a snapshot named `SNAP_NAME` with the snapshot details of `SNAP_DETAILS`.  After the snap is created it will power on the VM so you can get back to work quickly.
 
 ###How do I use it?###
+  
+Modify `resnap.sh` to suit your environment.
 
-Change the variable in `resnap.sh` to `TARGET_VMS="your_vmnames"`
+Change `TARGET_VMS="mapr"` to contain the common name of the vm's you want to snapshot.  
 
-Execute directly on ESXi host or directly from your client machine via:
+You can also set the snapshot naming variables too:  
+
+    SNAP_NAME="latest snapshot"
+    SNAP_DETAILS="finally remembered setup passwordless ssh"  
+
+Execute directly on ESXi host or directly from your client machine via:  
 
  `ssh root@esxihostname < resnap.sh`
