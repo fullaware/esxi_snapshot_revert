@@ -1,15 +1,15 @@
-#ESXi revert multiple VM's back to single snapshot
+#VMWare ESXi revert multiple VM's back to single snapshot
 
 [What is this script doing?](#what)  
 [How do I use it?](#how)
 
-Used in lab environment where a single ESXi host is running multiple VM's that have a single snapshot.  We want to revert all the vms with a certain name back to that single snapshot.  
+Used in lab environment where a single VMWare ESXi host is running multiple VM's that have a single snapshot.  We want to revert all the vms with a certain name back to that single snapshot.  
 
 **NOT TESTED** If multiple snapshots exist, not sure what will happen.
 
 **Environment tested:**
   
-SERVER = ESXi 5.5 U1
+SERVER = VMWare ESXi 5.5 U1
 
 CLIENT = OSX 10.9.4
 
