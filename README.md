@@ -7,7 +7,15 @@
 
 ###Summary
 
-Used in lab environment where a single VMWare ESXi host is running multiple VM's that have a single snapshot.  We want to revert all the vms with a certain name back to that single snapshot.  If I were using a system that was supported by vSphere Perl SDK this would be a LOT easier.  Alas they don't see OSX as a valid dev/admin platform as of yet.  And I'm not going to waste resources on a vMA for such a simple task.
+Used in lab environment where a single VMWare ESXi host is running multiple VM's that have a single snapshot.  We want to revert all the vms with a certain name back to that single snapshot.  If I were using a system that was supported by vSphere Perl SDK this would be a LOT easier.  Alas they don't see OSX as a valid dev/admin platform as of yet.  And I'm not going to waste resources on a vMA for such a simple task.  
+
+I have 5 VM's named:  
+
+mapr01  
+mapr02  
+mapr03  
+mapr04  
+mapr05  
 
 **NOT TESTED** If multiple snapshots exist, not sure what will happen.
 
@@ -18,14 +26,6 @@ SERVER = VMWare ESXi 5.5 U1
 CLIENT = OSX 10.9.4
 
 All snapshots were created in the powered off state.
-
-I have 5 VM's named:  
-
-mapr01  
-mapr02  
-mapr03  
-mapr04  
-mapr05  
 
 SSH must be enabled on the ESXi host: [VMware KB](http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2004746)
 
