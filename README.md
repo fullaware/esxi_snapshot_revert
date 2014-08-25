@@ -97,3 +97,10 @@ Execute directly on ESXi host or directly from your client machine via:
 ###<a name="resnap"></a>(re)Create snapshots for multiple VM's###
 
 
+###How do I use it?###
+
+Change the variable in `resnap.sh` to `TARGET_VMS="your_vmnames"`
+
+Execute directly on ESXi host or directly from your client machine via:
+
+ `ssh root@esxihostname < resnap.sh`
