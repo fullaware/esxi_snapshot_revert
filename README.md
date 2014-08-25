@@ -107,7 +107,9 @@ Execute directly on ESXi host or directly from your client machine via:
 
 ##<a name="resnap"></a>(re)Create snapshots for multiple VM's###
 
-This will query your VMWare ESXi host for all the VM's whose names contain `TARGET_VMS` and will create a snapshot named `SNAP_NAME` with the snapshot details of `SNAP_DETAILS`.  After the snap is created it will power on the VM so you can get back to work quickly.
+1. This will query your VMWare ESXi host for all the VM's whose names contain `TARGET_VMS`.  
+2. It will then delete ALL snapshots for that VM.  It will create a snapshot named `SNAP_NAME` with the snapshot details of `SNAP_DETAILS`.  
+3. After the snap is created it will power on the VM so you can get back to work quickly.
 
 ###How do I use it?###
   
